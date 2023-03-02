@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 fastapi = {extras = ["all"], version = "*"}
 pika = "*"
+grpcio = "*"
+grpcio-tools = "*"
 
 [dev-packages]
 

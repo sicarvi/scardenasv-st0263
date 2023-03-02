@@ -39,6 +39,6 @@ def callback(ch, method, props, body):
     ch.basic_ack(delivery_tag=method.delivery_tag)
     
 channel.basic_consume(queue="requests", on_message_callback=callback)
-print('Initalized and listening')
+print('RabbitMQ initalized and consuming')
 channel.start_consuming()
 

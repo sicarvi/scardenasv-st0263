@@ -1,0 +1,20 @@
+syntax="proto3";
+
+service FileFindService{
+    rpc list_files (Empty) returns (Response1);
+    rpc get_file (Name) returns (Response2);
+}
+message Empty {
+    
+}
+message Name {
+    string name = 1;
+}
+
+message Response1 {
+    repeated string files = 1;
+}
+
+message Response2 {
+    string is_found = 1;
+}
