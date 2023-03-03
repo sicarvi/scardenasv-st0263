@@ -13,8 +13,7 @@ class MS2Servicer(ms2_pb2_grpc.FileFindServiceServicer):
     def list_files(self, request, context):
         p = join(getcwd(),DIR_NAME)
         files_found = [f for f in listdir(p) if isfile(join(p, f))]
-
-        return Response1(files=files_found)
+        return ms2_pb2.Response1(files=files_found)
     
     def get_file(self, request, context):
         isFound = 'File not found.'
@@ -24,7 +23,7 @@ class MS2Servicer(ms2_pb2_grpc.FileFindServiceServicer):
             if name in files:
                 isFound = 'Exists!'
 
-        return Response2(is_found=isFound)
+        return ms2_pb2.Response2(is_found=isFound)
     
 def main():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=4))
