@@ -1,0 +1,5 @@
+{
+    "DIR_NAME":"example_files",
+    "HOST_IP":"localhost",
+    "PORT":5672
+}

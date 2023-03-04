@@ -2,8 +2,14 @@ from os import listdir, getcwd, walk
 from os.path import isfile, join
 import pika
 import pickle
+import json
 
-DIR_NAME = "example_files"
+f = open('config.json')
+settings = json.load(f)
+DIR_NAME = settings['DIR_NAME']
+HOST_IP = settings['HOST_IP']
+PORT = settings['PORT']
+f.close()
 
 def list_files():
     p = join(getcwd(),DIR_NAME)
@@ -18,12 +24,11 @@ def get_file(name:str):
             isFound = 'Exists!'
     return isFound
 
-connection = pika.BlockingConnection(pika.ConnectionParameters('localhost', 5672, '/', pika.PlainCredentials("user", "password")))
+connection = pika.BlockingConnection(pika.ConnectionParameters(HOST_IP, PORT, '/', pika.PlainCredentials("user", "password")))
 channel = connection.channel()
 
 def callback(ch, method, props, body):
     body = pickle.loads(body)
-    print(f"LLEGO ESTO: {body}")
     if body.get('method') == 'list_files':
         response = pickle.dumps(list_files())
     elif body.get('method') == 'get_file':

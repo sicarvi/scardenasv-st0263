@@ -6,8 +6,12 @@ import grpc
 import ms2_pb2_grpc
 import ms2_pb2
 from google.protobuf.json_format import MessageToDict
+import json
 
-GRPC_PORT = 50054
+f = open('config.json')
+settings = json.load(f)
+GRPC_PORT = settings['GRPC_PORT']
+f.close()
 
 app = FastAPI()
 robin = 0
@@ -16,7 +20,7 @@ def runGRPC(operation,name=''):
     # operation = 0 --> call to list_files()
     # operaiton = 1 --> call to get_file()
     response = ''
-    with grpc.insecure_channel(f'127.0.0.1:9010') as channel:
+    with grpc.insecure_channel(f'127.0.0.1:{GRPC_PORT}') as channel:
         stub = ms2_pb2_grpc.FileFindServiceStub(channel)
         if operation == 0:
             response = stub.list_files(ms2_pb2.Empty())

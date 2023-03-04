@@ -4,9 +4,10 @@ import grpc
 import ms2_pb2_grpc
 import ms2_pb2
 from concurrent import futures
+import json
 
-DIR_NAME = "example_files"
-PORT = 50052
+DIR_NAME = ""
+PORT = 0
 
 class MS2Servicer(ms2_pb2_grpc.FileFindServiceServicer):
 
@@ -28,10 +29,15 @@ class MS2Servicer(ms2_pb2_grpc.FileFindServiceServicer):
 def main():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=4))
     ms2_pb2_grpc.add_FileFindServiceServicer_to_server(MS2Servicer(), server)
-    server.add_insecure_port(f'[::]:9010')
+    server.add_insecure_port(f'[::]:{PORT}')
     print('gRPC server is up and running')
     server.start()
     server.wait_for_termination()
 
 if __name__ == '__main__':
+    f = open('config.json')
+    settings = json.load(f)
+    DIR_NAME = settings['DIR_NAME']
+    PORT = settings['PORT']
+    f.close()
     main()
