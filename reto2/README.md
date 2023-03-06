@@ -16,7 +16,7 @@ Además se cuentan con archivos de configuración para los parámetros de ejecuc
 
 **Esta fue la arquitectura implementada:**
 
-![[Pasted image 20230305201728.png]]
+![alt text](https://github.com/[sicarvi]/[scardenasv-st0263]/blob/[master]/Pasted image 20230305201728.png?raw=true)
 Se hizo uso de comunicación asincrónica para el MOM server y de comunicación sincrónica para el gRPC. Se hace una separación por capas para seccionar las responsabilidades y la arquitectura de microservicios para la implementación de los métodos ``list_files()`` y ``find_files()``.
 
 ## 3. Descripción del ambiente de desarrollo y técnico: lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
