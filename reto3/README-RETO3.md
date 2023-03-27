@@ -14,7 +14,7 @@ Se desarrolló un despliegue de CMS Wordpress escalable, haciendo uso de una bas
 
 **Esta fue la arquitectura implementada:** 
 
-![[Pasted image 20230326161637.png]]
+![imagen arq](https://github.com/sicarvi/scardenasv-st0263/blob/master/reto3/Pasted%image%20230326161637.png?raw=true)
 
 El despliegue del sistema se hizo en nube con máquinas virtuales de GCP, además el dominio cuenta con un certificado SSL asociado, por lo que el acceso al Wordpress esta soportado sobre el protocolo HTTPS.
 
@@ -83,7 +83,7 @@ volumes:
 ```
 Además de esto se debe crear una regla de entrada en el firewall para que permita la entrada de tráfico TCP por el puerto `3306`. En GCP se hace a través de Firewall>Crear regla de firewall. Recuerde definir una etiqueta de red para poder aplicarla en la VM, ejemplo:
 
-![[Pasted image 20230326172352.png]]
+![imagen firewall](https://github.com/sicarvi/scardenasv-st0263/blob/master/reto3/Pasted%image%20230326172352.png?raw=true)
 
 Una vez se tengan los pasos anteriores listos, crear y ejecutar el contenedor de docker por medio del comando:
 ```bash
@@ -302,11 +302,11 @@ Recuerde inscribir en los registros de su DNS la dirección IP pública del serv
 
 Así luciría la consola de Google Cloud Platform una vez se tengan todas las VM desplegadas:
 
-![[Pasted image 20230326185126.png]]
+![imagen gcp](https://github.com/sicarvi/scardenasv-st0263/blob/master/reto3/Pasted%image%20230326185126.png?raw=true)
 
 Y el sitio web funcionando:
 
-![[Pasted image 20230326185409.png]]
+![imagen web](https://github.com/sicarvi/scardenasv-st0263/blob/master/reto3/Pasted%image%20230326185409.png?raw=true)
 # Referencias:
 Fuentes consultadas en el desarrollo del proyecto:
 - https://github.com/st0263eafit/st0263-231/tree/main/docker-nginx-wordpress-ssl-letsencrypt
