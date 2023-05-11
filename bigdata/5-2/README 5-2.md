@@ -4,7 +4,7 @@
 ## Docente:
 - Edwin Nelson Montoya Munera, emontoya@eafit.brightspace.com
 
-# Reto 5-1
+# Reto 5-2
 ## Descripción del proyecto
 ## 1.1. Que aspectos cumplió o desarrolló de la actividad propuesta por el profesor (requerimientos funcionales y no funcionales)
 En este laboratorio se usó un Cluster AWS EMR para practicar la gestión de archivos en HDFS y S3.
