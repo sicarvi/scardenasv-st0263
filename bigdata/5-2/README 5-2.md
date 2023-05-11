@@ -20,7 +20,7 @@ Todos los requisitos solicitados fueron completados.
 ## 3. Descripción del ambiente de EJECUCIÓN (en producción) lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.  
 
 Primero se creó un bucket S3 con acceso público de acuerdo a las instrucciones dadas:
-![[Pasted image 20230510211333.png]]
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-2/Pasted%20image%2020230510211333.png?raw=true)
 Para lograr esto se quitó la protección de acceso público que viene por defecto, y además es necesario añadir la siguiente configuración en las políticas del bucket:
 ```JSON
 {
@@ -37,35 +37,45 @@ Para lograr esto se quitó la protección de acceso público que viene por defec
 }
 ```
 Una vez hecho esto se pueden cargar los archivos del dataset deseado y cualquier usuario con la URL podrá ver el contenido:
-![[Pasted image 20230510212237.png]]
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-2/Pasted%20image%2020230510212237.png?raw=true)
 
 ### Operaciones realizadas en el HDFS:
 
 Copiar archivos dataset a Hadoop por medio de SCP:
-![[Pasted image 20230510211950.png]]
+
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-2/Pasted%20image%2020230510211950.png?raw=true)
 
 Copiar archivos locales hacia HDFS:
-![[Pasted image 20230510212149.png]]
+
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-2/Pasted%20image%2020230510212149.png?raw=true)
 
 Copiar archivos de S3 a HDFS:
-![[Pasted image 20230510212405.png]]
-![[Pasted image 20230510212422.png]]
+
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-2/Pasted%20image%2020230510212405.png?raw=true)
+
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-2/Pasted%20image%2020230510212422.png?raw=true)
 
 Copia recursiva de datos:
-![[Pasted image 20230510212506.png]]
-![[Pasted image 20230510212514.png]]
+
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-2/Pasted%20image%2020230510212506.png?raw=true)
+
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-2/Pasted%20image%2020230510212514.png?raw=true)
 
 Explorador de archivos en Hadoop:
-![[Pasted image 20230510212608.png]]
+
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-2/Pasted%20image%2020230510212608.png?raw=true)
 
 Creación de directorio:
-![[Pasted image 20230510212656.png]]
+
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-2/Pasted%20image%2020230510212656.png?raw=true)
 
 Subir archivo:
-![[Pasted image 20230510212717.png]]
+
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-2/Pasted%20image%2020230510212717.png?raw=true)
 
 Ver contenido del archivo:
-![[Pasted image 20230510212731.png]]
+
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-2/Pasted%20image%2020230510212731.png?raw=true)
 
 ## Referencias
 * [Github de la materia](https://github.com/st0263eafit/st0263-231/blob/main/bigdata/lab5-1-aws-emr.txt)  
