@@ -23,9 +23,11 @@ El cluster se creó con las siguientes características y aplicaciones:
 ![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-1/Pasted%20image%2020230510210145.png?raw=true)
 
 Cluster creado y corriendo de forma exitosa:
+
 ![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-1/Pasted%20image%2020230510210301.png?raw=true)
 
 Conexión exitosa al nodo central por SSH:
+
 ![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-1/Pasted%20image%2020230510210316.png?raw=true)
 
 ## Referencias
