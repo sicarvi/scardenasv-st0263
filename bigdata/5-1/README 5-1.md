@@ -19,13 +19,14 @@ Todos los requisitos solicitados fueron completados.
 ## 3. Descripción del ambiente de EJECUCIÓN (en producción) lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.  
 
 El cluster se creó con las siguientes características y aplicaciones:
-![[Pasted image 20230510210145.png]]
+
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-1/Pasted%20image%2020230510210145.png?raw=true)
 
 Cluster creado y corriendo de forma exitosa:
-![[Pasted image 20230510210301.png]]
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-1/Pasted%20image%2020230510210301.png?raw=true)
 
 Conexión exitosa al nodo central por SSH:
-![[Pasted image 20230510210316.png]]
+![img](https://github.com/sicarvi/scardenasv-st0263/blob/master/bigdata/5-1/Pasted%20image%2020230510210316.png?raw=true)
 
 ## Referencias
 * [Github de la materia](https://github.com/st0263eafit/st0263-231/blob/main/bigdata/lab5-1-aws-emr.txt)  
